@@ -1,0 +1,2 @@
+# pintshirt.net
+build webstore
