@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{402C0DB0-58FF-4AFE-A8F2-2F8FED17457D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StoneCastle.Services</RootNamespace>
+    <AssemblyName>StoneCastle.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.1.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.1.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net-loggly, Version=7.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net-loggly.7.2.1\lib\net40\log4net-loggly.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.0.0.127, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.0.0\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.0.0.127, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.0.0\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Jwt, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Jwt.3.0.1\lib\net45\Microsoft.Owin.Security.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Services" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.0.0.127, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.0.0\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thinktecture.IdentityModel, Version=3.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Thinktecture.IdentityModel.3.6.1\lib\net45\Thinktecture.IdentityModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Thinktecture.IdentityModel.Owin, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Thinktecture.IdentityModel.Owin.2.1.1\lib\net45\Thinktecture.IdentityModel.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationService.cs" />
+    <Compile Include="Application\IApplicationService.cs" />
+    <Compile Include="Email\EmailServiceBase.cs" />
+    <Compile Include="Email\GmailProvider.cs" />
+    <Compile Include="Email\IEmailService.cs" />
+    <Compile Include="Email\ISendMailProvider.cs" />
+    <Compile Include="Email\IWorkingEmailService.cs" />
+    <Compile Include="Email\WorkingEmailService.cs" />
+    <Compile Include="Messaging\MessagingDatabindingHelperService.cs" />
+    <Compile Include="Messaging\MessagingMessageService.cs" />
+    <Compile Include="Messaging\IMessagingDatabindingHelperService.cs" />
+    <Compile Include="Messaging\IMessagingMessageService.cs" />
+    <Compile Include="Organization\ClassGroupService.cs" />
+    <Compile Include="Organization\ClassRoomService.cs" />
+    <Compile Include="Organization\ClassCourseService.cs" />
+    <Compile Include="Organization\IBuildingService.cs" />
+    <Compile Include="Organization\IOrganizationService.cs" />
+    <Compile Include="Organization\ISemesterService.cs" />
+    <Compile Include="Organization\IClassCourseService.cs" />
+    <Compile Include="Organization\IClassRoomService.cs" />
+    <Compile Include="Organization\IClassGroupService.cs" />
+    <Compile Include="Organization\OrganizationService.cs" />
+    <Compile Include="Organization\SemesterService.cs" />
+    <Compile Include="Organization\BuildingService.cs" />
+    <Compile Include="Organization\SubjectService.cs" />
+    <Compile Include="Organization\SubjectGroupService.cs" />
+    <Compile Include="Organization\ISubjectService.cs" />
+    <Compile Include="Organization\ISubjectGroupService.cs" />
+    <Compile Include="Organization\RoomService.cs" />
+    <Compile Include="Organization\IRoomService.cs" />
+    <Compile Include="Organization\IDivisionService.cs" />
+    <Compile Include="Account\ITeacherService.cs" />
+    <Compile Include="Account\IProfileService.cs" />
+    <Compile Include="Account\TeacherService.cs" />
+    <Compile Include="Account\ProfileService.cs" />
+    <Compile Include="BaseService.cs" />
+    <Compile Include="IBaseService.cs" />
+    <Compile Include="MappingHelper.cs" />
+    <Compile Include="Organization\DivisionService.cs" />
+    <Compile Include="Scheduler\ISchedulingService.cs" />
+    <Compile Include="Scheduler\IScheduleMan.cs" />
+    <Compile Include="Scheduler\ITimetableService.cs" />
+    <Compile Include="Scheduler\KatinaSchedulingService.cs" />
+    <Compile Include="Scheduler\ScheduleMan.cs" />
+    <Compile Include="Scheduler\TimetableHelper.cs" />
+    <Compile Include="Scheduler\TimetableService.cs" />
+    <Compile Include="Schedule\ScheduleService.cs" />
+    <Compile Include="Schedule\IScheduleService.cs" />
+    <Compile Include="SCLog4netAutofacModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SCServicesAutoFacModule.cs" />
+    <Compile Include="TrainingProgram\TrainingProgramService.cs" />
+    <Compile Include="TrainingProgram\CourseService.cs" />
+    <Compile Include="TrainingProgram\ITrainingProgramService.cs" />
+    <Compile Include="TrainingProgram\ICourseService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StoneCastle.Commons\StoneCastle.Commons.csproj">
+      <Project>{1049bead-7a5d-4734-abe7-6559aab2d70f}</Project>
+      <Name>StoneCastle.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StoneCastle.Data\StoneCastle.Data.csproj">
+      <Project>{e8b84606-c81e-4e94-a25b-173053ac7ae3}</Project>
+      <Name>StoneCastle.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StoneCastle.Domain\StoneCastle.Domain.csproj">
+      <Project>{66899671-40eb-4912-b50f-8099d72677d6}</Project>
+      <Name>StoneCastle.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StoneCastle.Models\StoneCastle.Models.csproj">
+      <Project>{21d03645-678d-43e3-a839-b233fcbf7f2d}</Project>
+      <Name>StoneCastle.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
